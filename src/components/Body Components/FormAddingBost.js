@@ -5,6 +5,14 @@ import user from "../../images/user.webp"
 import like from "../../images/facebook-reactions-emoticons/png-16/like-16x16-1991059.png"
 import { AuthContext } from '../../context/AuthContext';
 function FormAddingBost() {
+
+
+
+  useEffect(()=>{
+   
+      document.addEventListener("mousedown",handler)
+  });
+
   const { currentUser } = useContext(AuthContext);
   const name = [];
   let length = 0;
@@ -24,12 +32,23 @@ function FormAddingBost() {
   finalName = slicedName.replace(/,/g,'')
   const area = useRef()
   const form = useRef()
+  const buttons = useRef()
   useEffect(()=>{
     let handler = (e)=>{
       area.current.focus()
     }
     form.current.addEventListener("mouseenter",handler)
 });
+let handler = (e)=>{
+  if(!form.current.contains(e.target) &&!buttons.current.contains(e.target)){
+      setTimeout(() => {
+          dispatch(actions.togglePosts())
+
+      }, 200);
+      
+
+      }
+}
   const [image, setImage] = useState('')
   const [loading, setLoading] = useState(false)
   const [input, setInput] = useState("");
@@ -70,7 +89,7 @@ function FormAddingBost() {
   return (
     <div className="adding-posts "ref={form}>
 
-      <header>
+      <header ref={buttons}>
         <h1>create post</h1>
         <span onClick={toggle}><i class="fa-solid fa-xmark"></i></span>
         <hr></hr>

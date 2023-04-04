@@ -9,6 +9,7 @@ import angry from "../../images/angry-24x24-1991061.png"
 import love from "../../images/love-24x24-1991064.png"
 
 import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { json } from "react-router-dom";
 
 const posts = createSlice({
     name: "posts",
@@ -50,11 +51,11 @@ const posts = createSlice({
             if (state.openAddpost == true) {
                 state.openAddpost = false;
 
-
             }
             else {
                 state.openAddpost = true;
 
+                {localStorage.getItem("posts")==null?localStorage.setItem("posts","[]"):localStorage.setItem("posts",localStorage.getItem("posts"))}
 
             }
 

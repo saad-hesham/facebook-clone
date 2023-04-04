@@ -1578,16 +1578,14 @@ display: block;
 }
 .message-block {
   display: flex;
-  margin: 1rem;
-  margin-top: 2rem;
+
 }
 .notifications>section:hover{
   background-color: transparent;
 }
 .message-block {
   display: flex;
-  margin: 1rem;
-  margin-top: 2rem;
+
   padding: 10px 1rem;
 }
 .userChatInfo{

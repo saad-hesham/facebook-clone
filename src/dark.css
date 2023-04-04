@@ -138,6 +138,8 @@ body.dark .message-search-bar {
     margin-top: 9px;
     margin-bottom: -10px;
     margin-left: -10px;
+    color: white;
+    
 }
 
 body.dark .block form div:hover {
@@ -356,6 +358,7 @@ body.dark .input {
 body.dark .input input {
 
     background: #3a3b3c;
+    color: white;
 
 }
 body.dark .chat-header {
