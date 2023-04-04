@@ -1,0 +1,40 @@
+// import { useState } from "react"
+// import { useDispatch, useSelector } from "react-redux"
+// import { actions } from "./redux/Store"
+// function Posts(){
+//     const [title,setTitle]=useState("");
+//     const [disc,setDisc]=useState("");
+//     const dispatch = useDispatch();
+//     const state = useSelector((state)=>state.posts);
+//     const dele = ()=>{
+//         dispatch(actions.delete(state.length))
+        
+//     }
+//     const add = ()=>{
+//         dispatch(actions.addpost({title,disc,id:state.length+1}))
+//     }
+   
+//     return(
+//         <div>
+//         <div className="form">
+//             <input type="text" placeholder ="Enter Post Title" onChange={(e)=>setTitle(e.target.value) }/>
+//             <input type="text" placeholder ="Enter Post Discription" onChange={(e)=>setDisc(e.target.value) }/>
+//             <button onClick={add}>Add Post</button>
+            
+//         </div>
+//         <div className="posts">
+//           {state.map(function(post){
+//             return     <div className="post">
+//             <h2>{post.title}</h2>
+//            <p>{post.disc}</p>
+//            <button>edit</button>
+//            <button onClick={dele}>delete</button> 
+//        </div> 
+//           })}
+    
+//         </div>
+//         </div>
+//     )
+
+// }
+// export default Posts
